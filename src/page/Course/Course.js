@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CoursesDetails from '../CoursesDetails/CoursesDetails';
+import './Course.css'
 
 const Course = () => {
   const [courses, setCourses] = useState([]);
@@ -13,7 +14,7 @@ const Course = () => {
   }, [])
 
   return (
-    <div>
+    <div className='grid'>
       {
         courses.map(c => <CoursesDetails key={c.id} c={c}></CoursesDetails>)
       }

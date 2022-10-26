@@ -14,7 +14,7 @@ const RightSidePart = () => {
     <div>
       <h4>Our Best Courses</h4>
       {
-        courses.map(c => <h4><Link to={`course/${c.id}`} key={c.id}> {c.name}</Link></h4>)
+        courses.map(c => <h4><Link to={`${c.id}`} key={c.id}> {c.name}</Link></h4>)
       }
     </div>
   );
