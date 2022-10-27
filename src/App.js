@@ -3,6 +3,7 @@ import './App.css';
 import Course from './page/Course/Course';
 import CourseInfo from './page/CourseInfo/CourseInfo';
 import CoursePage from './page/CoursePage/CoursePage';
+import Error from './page/Error/Error';
 import Home from './page/Home/Home';
 import Main from './page/layout/Main';
 import Login from './page/Login/Login';
@@ -12,6 +13,7 @@ const routes = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',

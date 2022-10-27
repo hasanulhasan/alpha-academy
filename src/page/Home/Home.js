@@ -1,9 +1,12 @@
 import React from 'react';
+import './Home.css'
 
 const Home = () => {
   return (
-    <div>
-      <h1>this is home</h1>
+    <div className='mt-5 text-center'>
+      <h1>Welcome to Alpha Academy!</h1>
+      <h2>Learn without limits</h2>
+      <p className='fs-3'>Start, switch, or advance your career with our courses, Professional Certificates, and degrees from world-class universities and companies.</p>
     </div>
   );
 };

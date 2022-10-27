@@ -1,4 +1,4 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { Image } from 'react-bootstrap';
@@ -12,6 +12,7 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 const Header = () => {
   const { user, providerLogin, logOut } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
+  const githubProveder = new GithubAuthProvider();
 
   const handleGoogleSignIn = () => {
     providerLogin(googleProvider)
@@ -25,6 +26,17 @@ const Header = () => {
 
   }
 
+  const handleGitHubSignIn = () => {
+    providerLogin(githubProveder)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch(error => {
+        console.error(error);
+      })
+  }
+
   const handleLogOut = () => {
     logOut()
       .then(() => { })
@@ -35,7 +47,7 @@ const Header = () => {
       <div className='nav-1'>
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="#home">Alpha Academy</Navbar.Brand>
+            <Navbar.Brand><Link to='/'><button className='btn btn-light fs-4'>Alpha Academy</button></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -60,6 +72,7 @@ const Header = () => {
                   && <Image style={{ height: "35px" }} roundedCircle src={user.photoURL
                   }></Image>}</Nav.Link>
                 <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGoogleSignIn}>Google</button></Nav.Link>
+                <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGitHubSignIn}>Github</button></Nav.Link>
               </div>
             </Navbar.Collapse>
           </Container>
