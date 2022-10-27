@@ -81,7 +81,7 @@ const Header = () => {
                     </>
                 }
                 <Nav.Link href="#home" className='ps-2'>{user?.photoURL
-                  && <Image style={{ height: "35px" }} roundedCircle src={user.photoURL
+                  && <Image style={{ height: "35px" }} roundedCircle title={user.displayName} src={user.photoURL
                   }></Image>}</Nav.Link>
                 <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGoogleSignIn}>Google</button></Nav.Link>
                 <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGitHubSignIn}>Github</button></Nav.Link>

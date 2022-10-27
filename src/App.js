@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import CheckOut from './CheckOut/CheckOut';
-import AuthProvider from './page/AuthProvider/AuthProvider';
 import Course from './page/Course/Course';
 import CourseInfo from './page/CourseInfo/CourseInfo';
 import CoursePage from './page/CoursePage/CoursePage';
@@ -34,26 +33,26 @@ const routes = createBrowserRouter([
       {
         path: 'checkout/:id',
         element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>,
-        loader: ({ params }) => fetch(`http://localhost:5001/coursepage/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-peach.vercel.app/coursepage/${params.id}`)
       },
       {
         path: 'faq',
-        element: <PrivateRouter><FAQ></FAQ></PrivateRouter>
+        element: <FAQ></FAQ>
       },
       {
         path: '/coursepage/:id',
         element: <CourseInfo></CourseInfo>,
-        loader: ({ params }) => fetch(`http://localhost:5001/coursepage/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-peach.vercel.app/coursepage/${params.id}`)
       },
       {
         path: '/coursepage',
         element: <CoursePage></CoursePage>,
-        loader: ({ params }) => fetch(`http://localhost:5001/coursepage/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-peach.vercel.app/coursepage`)
       },
       {
         path: '/course/:id',
         element: <Course></Course>,
-        loader: ({ params }) => fetch(`http://localhost:5001/course/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-peach.vercel.app/course/${params.id}`)
       }
     ]
   }
