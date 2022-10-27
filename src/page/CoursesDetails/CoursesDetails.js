@@ -17,7 +17,7 @@ const CoursesDetails = ({ c }) => {
           <img className="card-img-top" src={image} alt="Card image cap" />
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
-            <Link to={`${c.id}`}><button className='btn btn-light'>go course</button></Link>
+            <Link to={`${c.id}`}><button className='btn btn-light  btn-outline-primary'>Go course</button></Link>
           </div>
         </div>
       </div>
