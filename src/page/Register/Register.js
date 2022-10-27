@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Register = () => {
@@ -46,6 +47,9 @@ const Register = () => {
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control name='password' type="password" placeholder="Password" />
+        </Form.Group>
+        <Form.Group className="mb-3">
+          <p>Already have an account? <Link to='/login'>Login</Link></p>
         </Form.Group>
         <Form.Group className="mb-3 text-bg-danger">
           {error}

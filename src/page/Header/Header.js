@@ -1,5 +1,6 @@
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
@@ -10,6 +11,11 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Header = () => {
+  const [state, setState] = useState(true);
+  const toggle = () => {
+    setState(!state);
+  }
+
   const { user, providerLogin, logOut } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const githubProveder = new GithubAuthProvider();
@@ -47,13 +53,19 @@ const Header = () => {
       <div className='nav-1'>
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand><Link to='/'><button className='btn btn-light fs-4'>Alpha Academy</button></Link></Navbar.Brand>
+            <Navbar.Brand><Link to='/'><Image style={{ height: "30px" }} roundedCircle src='https://cdn-icons-png.flaticon.com/512/2169/2169601.png'></Image><button className='btn btn-light fs-4'>Alpha Academy</button></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link><Link to='/'><button className='btn btn-light'>Home</button></Link></Nav.Link>
                 <Nav.Link><Link to='/coursepage'><button className='btn btn-light'>Courses</button></Link></Nav.Link>
                 <Nav.Link><Link to='/faq'><button className='btn btn-light'>FAQ</button></Link></Nav.Link>
+                <Nav.Link><Link to='/blog'><button className='btn btn-light'>Blog</button></Link></Nav.Link>
+                <Nav.Link><button className='btn btn-light' onClick={toggle}>
+                  {
+                    state ? 'Dark' : 'Light'
+                  }
+                </button></Nav.Link>
               </Nav>
               <div className='d-flex'>
                 {
