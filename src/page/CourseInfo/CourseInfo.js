@@ -1,22 +1,25 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import RightSidePart from '../shared/RightSidePart';
 
 const CourseInfo = () => {
   const courseInfo = useLoaderData();
   const { name, image, details } = courseInfo;
 
-  return (<Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src={image} />
-    <Card.Body>
-      <Card.Title>{name}</Card.Title>
-      <Card.Text>
-        {details}
-      </Card.Text>
-      <Button variant="primary">Go Premimum</Button>
-    </Card.Body>
-  </Card>
+  return (<div>
+    <div class='grid'>
+      <div className="card">
+        <img className="card-img-top" src={image} alt="Card image cap" />
+        <div className="card-body">
+          <h5 className="card-title">{name}</h5>
+          <p>{details}</p>
+          <Link><button className='btn btn-light'>go course</button></Link>
+        </div>
+      </div>
+    </div >
+  </div>
   );
 };
 

@@ -11,15 +11,17 @@ const CoursesDetails = ({ c }) => {
   console.log(c);
   const { id, name, image } = c;
   return (
-    <div class='grid'>
-      <div className="card">
-        <img className="card-img-top" src={image} alt="Card image cap" />
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <Link to={`${c.id}`}><button>go course</button></Link>
+    <div>
+      <div class='grid'>
+        <div className="card">
+          <img className="card-img-top" src={image} alt="Card image cap" />
+          <div className="card-body">
+            <h5 className="card-title">{name}</h5>
+            <Link to={`${c.id}`}><button className='btn btn-light'>go course</button></Link>
+          </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 
