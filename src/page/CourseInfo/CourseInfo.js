@@ -6,7 +6,7 @@ import RightSidePart from '../shared/RightSidePart';
 
 const CourseInfo = () => {
   const courseInfo = useLoaderData();
-  const { name, image, details } = courseInfo;
+  const { name, image, details, id } = courseInfo;
 
   return (
     <div>
@@ -24,7 +24,7 @@ const CourseInfo = () => {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p>{details}</p>
-            <Link to='/checkout'><button className='btn btn-light btn-outline-success'>Get premium access</button></Link>
+            <Link to={`/checkout/${id}`}><button className='btn btn-light btn-outline-success'>Get premium access</button></Link>
           </div>
         </div>
       </div >

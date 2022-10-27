@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import CheckOut from './CheckOut/CheckOut';
+import AuthProvider from './page/AuthProvider/AuthProvider';
 import Course from './page/Course/Course';
 import CourseInfo from './page/CourseInfo/CourseInfo';
 import CoursePage from './page/CoursePage/CoursePage';
@@ -10,6 +11,7 @@ import Home from './page/Home/Home';
 import Main from './page/layout/Main';
 import Login from './page/Login/Login';
 import Register from './page/Register/Register';
+import PrivateRouter from './PrivateRouter/PrivateRouter';
 
 const routes = createBrowserRouter([
   {
@@ -30,12 +32,13 @@ const routes = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: 'checkout',
-        element: <CheckOut></CheckOut>
+        path: 'checkout/:id',
+        element: <PrivateRouter><CheckOut></CheckOut></PrivateRouter>,
+        loader: ({ params }) => fetch(`http://localhost:5001/coursepage/${params.id}`)
       },
       {
         path: 'faq',
-        element: <FAQ></FAQ>
+        element: <PrivateRouter><FAQ></FAQ></PrivateRouter>
       },
       {
         path: '/coursepage/:id',
