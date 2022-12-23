@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css'
 import Slider from './Slider/Slider';
+import Subscribe from './Subscribe/Subscribe';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         <button type="button" class="btn btn-primary btn-lg">Go Course</button>
         <button type="button" class="btn btn-lg btn-outline-primary ms-2">Learn More</button>
       </div>
+      <Subscribe></Subscribe>
     </div>
   );
 };

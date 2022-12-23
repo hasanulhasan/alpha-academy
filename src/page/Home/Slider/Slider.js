@@ -13,34 +13,38 @@ const Slider = () => {
             height='600px'
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <div className='bg-info rounded-5 py-1 text-black'>
+              <h3>A to Z online leaning</h3>
+              <p>We are providing certified courses that make you allrounder</p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://www.evelynlearning.com/wp-content/uploads/2021/05/D68CD232-4AC7-40D7-A0CA-1AA082FD28A9.jpeg"
+            src="https://www.makeintern.com/learning/img/online-course12.jpg"
             alt="Second slide"
             height='600px'
           />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Carousel.Caption className='text-black'>
+            <div className='bg-info rounded-5 py-1 text-black'>
+              <h3>Sharp your ability by new skill</h3>
+              <p>The more you learn the more your developed</p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://elearningindustry.com/wp-content/uploads/2021/11/Animated-Video-Characters-In-eLearning-7-Tips.jpg"
+            src="https://images.yourstory.com/cs/1/d091a0b0244c11e9b09763a7a0dcdfd5/e-Learning-Products-1585045528688.png"
             alt="Third slide"
             height='600px'
           />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
+          <Carousel.Caption className='text-black'>
+            <div className='bg-info rounded-5 py-1 text-black'>
+              <h3>Modern Technology for Upcoming Revolution</h3>
+              <p>Latest Technology will help you to overcome next Challenge</p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
