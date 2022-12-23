@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -11,7 +12,8 @@ const Hero = () => {
           <div class="">
             <h1 class="fs-1 text-uppercase large-font fw-bolder pb-3"> Welcome to<br /> <span class="text-warning">Alpha </span>Academy!</h1>
             <p class="fs-4 pb-2">Start, switch, or advance your career with our courses, Professional Certificates, and degrees from world-class universities and companies.</p>
-            <button class="btn btn-warning btn-lg">Go Courses</button>
+            <Link to='/coursepage'><button class="btn btn-warning btn-lg">Go Courses</button></Link>
+
             <button type="button" class="btn btn-lg btn-outline-warning ms-2 text-black">Learn More</button>
           </div>
         </div>
