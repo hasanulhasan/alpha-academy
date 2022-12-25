@@ -72,19 +72,19 @@ const Header = () => {
                   user?.uid ?
                     <>
                       <span>{user.displayName}</span>
-                      <Link className='ps-2'><button className='btn btn-light' onClick={handleLogOut}>Logout</button></Link>
+                      <Link className='ps-2'><button className='btn btn-outline-warning font-weight-bold text-dark' onClick={handleLogOut}>Logout</button></Link>
                     </>
                     :
                     <>
-                      <Link to='/login'><button className='btn btn-light'>Login</button></Link>
-                      <Link to='/register' className='ps-2'><button className='btn btn-light'>Register</button></Link>
+                      <Link to='/login'><button className='btn btn-outline-warning font-weight-bold text-dark'>Login</button></Link>
+                      {/* <Link to='/register' className='ps-2'><button className='btn btn-light'>Register</button></Link> */}
                     </>
                 }
                 <Nav.Link href="#home" className='ps-2'>{user?.photoURL
                   && <Image style={{ height: "35px" }} roundedCircle title={user.displayName} src={user.photoURL
                   }></Image>}</Nav.Link>
-                <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGoogleSignIn}>Google</button></Nav.Link>
-                <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGitHubSignIn}>Github</button></Nav.Link>
+                {/* <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGoogleSignIn}>Google</button></Nav.Link> */}
+                {/* <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGitHubSignIn}>Github</button></Nav.Link> */}
               </div>
             </Navbar.Collapse>
           </Container>
