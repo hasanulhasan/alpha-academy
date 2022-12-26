@@ -1,4 +1,3 @@
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
@@ -6,7 +5,6 @@ import { Image } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
@@ -15,39 +13,14 @@ const Header = () => {
   const toggle = () => {
     setState(!state);
   }
-
-  const { user, providerLogin, logOut } = useContext(AuthContext);
-  const googleProvider = new GoogleAuthProvider();
-  const githubProveder = new GithubAuthProvider();
-
-  const handleGoogleSignIn = () => {
-    providerLogin(googleProvider)
-      .then(result => {
-        const user = result.user;
-        console.log(user);
-      })
-      .catch(error => {
-        console.error(error);
-      })
-
-  }
-
-  const handleGitHubSignIn = () => {
-    providerLogin(githubProveder)
-      .then(result => {
-        const user = result.user;
-        console.log(user);
-      })
-      .catch(error => {
-        console.error(error);
-      })
-  }
+  const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut()
       .then(() => { })
       .catch(e => console.error(e))
   }
+
   return (
     <div>
       <div className='nav-1'>
@@ -77,14 +50,11 @@ const Header = () => {
                     :
                     <>
                       <Link to='/login'><button className='btn btn-outline-warning font-weight-bold text-dark'>Login</button></Link>
-                      {/* <Link to='/register' className='ps-2'><button className='btn btn-light'>Register</button></Link> */}
                     </>
                 }
                 <Nav.Link href="#home" className='ps-2'>{user?.photoURL
                   && <Image style={{ height: "35px" }} roundedCircle title={user.displayName} src={user.photoURL
                   }></Image>}</Nav.Link>
-                {/* <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGoogleSignIn}>Google</button></Nav.Link> */}
-                {/* <Nav.Link href="#home" className='ps-2'><button className='btn btn-light' onClick={handleGitHubSignIn}>Github</button></Nav.Link> */}
               </div>
             </Navbar.Collapse>
           </Container>
