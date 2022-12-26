@@ -8,11 +8,11 @@ const CoursePage = () => {
     <div>
       <Container>
         <Row>
-          <Col lg='8'>
+          <Col lg='9'>
             <h1>Here some courses that we offer to you</h1>
             <Course></Course>
           </Col>
-          <Col lg='4'>
+          <Col lg='3'>
             <RightSidePart></RightSidePart>
           </Col>
         </Row>

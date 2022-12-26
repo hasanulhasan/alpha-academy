@@ -3,7 +3,10 @@ import Accordion from 'react-bootstrap/Accordion';
 
 const FAQ = () => {
   return (
-    <div>
+    <div className='my-5'>
+      <div className='my-2'>
+        <h1 class="display-3 text-center">Frequently Asked Question</h1>
+      </div>
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
           <Accordion.Header>What is `cors`?</Accordion.Header>

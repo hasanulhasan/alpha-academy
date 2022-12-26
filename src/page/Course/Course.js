@@ -14,9 +14,9 @@ const Course = () => {
   }, [])
 
   return (
-    <div className='grid'>
+    <div className='grid gap-5 my-4'>
       {
-        courses.map(c => <CoursesDetails key={c.id} c={c}></CoursesDetails>)
+        courses.map(course => <CoursesDetails key={course.id} course={course}></CoursesDetails>)
       }
     </div>
   );

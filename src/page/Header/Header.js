@@ -32,8 +32,8 @@ const Header = () => {
               <Nav className="me-auto">
                 <Nav.Link><Link to='/'><button className='btn btn-light'>Home</button></Link></Nav.Link>
                 <Nav.Link><Link to='/coursepage'><button className='btn btn-light'>Courses</button></Link></Nav.Link>
-                <Nav.Link><Link to='/faq'><button className='btn btn-light'>Blog</button></Link></Nav.Link>
-                <Nav.Link><Link to='/blog'><button className='btn btn-light'>FAQ</button></Link></Nav.Link>
+                <Nav.Link><Link to='/blog'><button className='btn btn-light'>Blog</button></Link></Nav.Link>
+                <Nav.Link><Link to='/faq'><button className='btn btn-light'>FAQ</button></Link></Nav.Link>
                 <Nav.Link><button className='btn btn-light' onClick={toggle}>
                   {
                     state ? 'Dark' : 'Light'
