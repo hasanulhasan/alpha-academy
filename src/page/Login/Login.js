@@ -116,7 +116,6 @@ const Login = () => {
                   <a href="#!" className="text-body">Forgot password?</a>
                 </div>
                 <div>
-
                   {error && <p className='p-1 rounded-2 bg-danger text-white text-center mt-1'>{error}</p>}
                 </div>
 
