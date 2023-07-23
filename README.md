@@ -1,15 +1,20 @@
-# Web Site name Alpha Academy
-live site link: 
+# Alpha Academy
+Educational course information related website
 
-## 5 bullet point
 
-1-my site name is different
-2-my idea is unique
-3-you can see course details by clicking courses
-4-you can log in with 3 different way
-5-overall it is a full stack website
+## Project feature
+1- User can login/signup with firebase</br>
+2- User can see courses and curse details page</br>
+3- User can download the course details as Pdf</br>
+4- Authenticated User can get premium access of course</br>
+5- This site is fully responsive</br>
+6- This full stack site may be a mini e-course selling website.</br>
 
-## Frame work and library
-1- React
-2- Bootstrap
-3- React- Bootstrap
+### `Technology used:`
+
+𝑭𝒓𝒐𝒏𝒕 𝑬𝒏𝒅: Bootstrap, React JS, JavaScript, React Router, Firebase</br>
+𝑩𝒂𝒄𝒌 𝑬𝒏𝒅: Node Js, Express Js, MongoDB</br>
+
+
+### `Live link` https://alpha-academy-simple.web.app/
+### `Back End` https://github.com/hasanulhasan/alpha-academy-server
